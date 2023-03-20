@@ -7,8 +7,8 @@
     --white: hsl(0, 0%, 100%);
     --box-shadow-color: hsl(221, 100%, 96%);
     --text-color-1: hsl(241, 100%, 89%);
-    --text-color-2: hsl(224, 30%, 27%);
-    --text-color-3: hsl(300, 3%, 61%);
+    --text-color-2: hsl(300, 3%, 61%);
+    --dark-color-hsl: 224, 30%, 27%;
 
     --background-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     --circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'HankenGrotesk';
     font-display: swap;
-    src: url(./HankenGrotesk-VariableFont_wght.woff2) format('woff2');
+    src: url(../HankenGrotesk-VariableFont_wght.woff2) format('woff2');
 }
 
 body {
@@ -103,7 +103,7 @@ button:hover {
 }
 
 .summary-header {
-    color: var(--text-color-2);
+    color: hsla(var(--dark-color-hsl));
     font-size: 1.25rem;
 }
 
@@ -149,16 +149,16 @@ button:hover {
 
 .summary-item-score {
     text-align: right;
-    color: var(--text-color-3);
+    color: var(--text-color-2);
     font-weight: 700;
 }
 
 .summary-item-value {
-    color: var(--text-color-2);
+    color: hsla(var(--dark-color-hsl));
 }
 
 .continue-button {
-    background-color: var(--text-color-2);
+    background-color: hsla(var(--dark-color-hsl));
     border: none;
     border-radius: 100vw;
     color: var(--white);
@@ -166,6 +166,10 @@ button:hover {
     font-weight: 500;
     padding: 0.75em;
     margin-top: 1.25em;
+}
+
+.continue-button:hover {
+    background-color: hsla(var(--dark-color-hsl), 0.9);
 }
 
 .attribution {
